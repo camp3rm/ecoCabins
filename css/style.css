@@ -1,0 +1,438 @@
+/*------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Rubik:regular,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:900&display=swap");
+/*------------------------------------------------*/
+
+
+/* -----ПІДГОТОВКА----- */
+
+
+/* Обнулення стилів */
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 20rem;
+  line-height: 1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: transparent;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+
+}
+
+
+
+/*----------Стилі за замовчуванням----------*/
+body {
+  font-size: 0.875rem;
+  font-family: "Rubik";
+  color: #646D70;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: clip;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+/*----- Налаштування адаптиву і визначення обмежуючого контейнера-----*/
+
+[class*="__container"] {
+  max-width: 52.5rem;
+  padding: 0rem 0.9375rem;
+  margin: 0 auto;
+}
+
+/*-----Модулі-----*/
+.title {
+  font-family: "Merriweather";
+  color: #fff;
+  font-size: 1.875rem;
+  line-height: 130%;
+}
+
+.title--dark {
+  color: #222F33;
+}
+
+/* -----ПІДГОТОВКА----- */
+
+
+
+/* -----ВЕРСТКА----- */
+
+
+/*-----Основні стилі-----*/
+.page {
+  flex: 1 1 auto;
+
+}
+
+.page__main {}
+
+.page__materials {}
+
+
+
+/*-----Основні стилі----- */
+
+/*-----Header----- */
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+.header__container {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  min-height: 6.5625rem;
+}
+
+.header__logo {
+  overflow: hidden;
+}
+
+.header__logo img {
+  width: 8.4375rem;
+}
+
+@media (max-width: 39.0625em) {
+  .header__logo {
+    flex: 0 0 2.0625rem;
+  }
+
+  .menu__list {
+    column-gap: 1.25rem;
+    font-style: 0.875rem;
+  }
+
+  .header__button {
+    padding: 0.625rem 0.9375rem;
+  }
+
+  .header__body {
+    column-gap: 1.25rem;
+  }
+
+  .header__container {
+    min-height: 6.25rem;
+  }
+}
+
+
+.header__body {
+  display: flex;
+  align-items: center;
+  column-gap: 2.6875rem;
+
+}
+
+.header__menu {}
+
+.header__button {
+  padding: 0.625rem 1.3125rem;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  transition: all 0.3s;
+}
+
+
+
+.header__button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.menu {}
+
+.menu__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 2.5rem;
+  row-gap: 0.625rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+
+.menu__item {}
+
+.menu__link {}
+
+.menu__link:hover {}
+
+/*-----Main----- */
+
+.main-section {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+}
+
+.main-section__container {
+  padding-top: 5.625rem;
+  padding-bottom: 3.125rem;
+  position: relative;
+  z-index: 2;
+  gap: 1.25rem;
+  min-height: 100%;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 54.320988% 1fr;
+  flex: 1 1 auto;
+}
+
+@media (max-width: 43.75rem) {
+  .main-section__container {
+    grid-template-columns: auto;
+    align-content: center;
+  }
+}
+
+
+.main-section__content {
+  justify-self: center;
+
+}
+
+.main-section__label {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+
+}
+
+.main-section__label:not(:last-child) {
+  padding-bottom: 0.75rem;
+}
+
+.main-section__title {}
+
+.main-section__video-link {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 500;
+
+}
+
+@media (min-width: 43.75rem) {
+  .main-section__video-link {
+    justify-content: center;
+  }
+}
+
+.main-section__video-link::before {
+  content: '';
+  width: 2rem;
+  height: 2rem;
+  flex: 0 0 2rem;
+  background: url(../img/play.svg) left no-repeat;
+  border-radius: 50%;
+}
+
+.main-section__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: black;
+}
+
+.main-section__image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+@media (max-width: 43.75rem) {
+  .main-section__image img {
+    opacity: 0.8;
+  }
+}
+
+
+/*-----Матеріали-----*/
+.swiper {
+  overflow: hidden;
+}
+
+.swiper-initialized {
+  touch-action: pan-y;
+}
+
+.swiper-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  box-sizing: content-box;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+}
+
+.materials {
+  position: relative;
+  z-index: 2;
+}
+
+.materials::before {
+  content: '';
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2.3125rem;
+  width: 61.7%;
+  transform: translate(0px, -100%);
+
+}
+
+.materials::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 38.3%;
+  height: 140px;
+  z-index: -1;
+  background-color: #222f33;
+}
+
+.materials__container {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 50% minmax(17.5rem, 20.3125rem);
+  justify-content: space-between;
+  align-items: start;
+  gap: 1.25rem;
+  /* min-width: 0; */
+}
+
+.materials__content {
+  padding-top: 1.5625rem;
+  display: grid;
+  gap: 0.8125rem;
+  justify-items: start;
+}
+
+.materials__title {}
+
+.materials__title:not(:last-child) {}
+
+.material__text {
+  line-height: 185%;
+}
+
+.materials__more {
+  border-radius: 0.25rem;
+  padding: 0.625rem 0.875rem;
+  border: 1px solid #646d70;
+}
+
+.materials__slider {
+  transform: translate(0, -20.765027%);
+
+}
+
+.slider-materials {
+  position: relative;
+
+}
+
+.slider-materials__wrapper {}
+
+.slider-materials__slide {
+  aspect-ratio: 325 / 366;
+  position: relative;
+  font-style: 0.75rem;
+  font-weight: 500;
+}
+
+.slider-materials__slide img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.slider-materials__pagination {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 1rem;
+  gap: 0.5rem;
+  position: absolute;
+  width: 100%;
+
+}
+
+@media (max-wi) {
+  
+}
